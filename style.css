@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: var(--primary-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.flex-box {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  width: 100%;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  right: 30px;
+  background: linear-gradient(45deg, rgb(206, 235, 221), #694c4c);
+  border-radius: 0 0 70px 70px;
+  z-index: -1;
+}
+
+header nav {
+  width: 90%;
+  height: 80px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 25px 20px;
+}
+
+header nav .nav-left img {
+  width: 50px;
+}
+
+header nav .nav-left .hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+header nav .nav-left .nav-menu {
+  margin-left: 20px;
+}
+
+header nav .nav-left .nav-menu li {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+header nav .nav-left .nav-menu li a {
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s linear;
+}
+
+header nav .nav-left .nav-menu li:first-child {
+  background: var(--third-color);
+  border-radius: 15px;
+  padding: 8px 15px;
+  box-shadow: var(--box-shadow-color);
+}
+
+header nav .nav-left .nav-menu li .home-img {
+  width: 18px;
+  margin-left: 5px;
+}
+
+#light {
+  width: 18px;
+  height: 18px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+header nav .nav-left .nav-menu li a:hover {
+  color: rgb(132, 139, 139);
+}
+
+header nav .nav-right {
+  margin-right: 20px;
+}
+
+header nav .nav-right ul li {
+  padding: 8px 12px;
+}
+
+header nav .nav-right ul li a {
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s linear;
+}
+
+header nav .nav-right ul li a:hover {
+  color: #e4cdcd;
+}
+
+header nav .subscribe {
+  padding: 8px 18px;
+  color: #fff;
+  background: red;
+  border-radius: 15px;
+  transition: 0.3s linear;
+}
+
+header nav .subscribe:hover {
+  transform: scale(1.03);
+  background: linear-gradient(45deg, rgb(213, 90, 178), rgb(118, 118, 213));
+}
+
+section {
+  width: 90%;
+  margin: 30px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+section .content {
+  width: 45%;
+  padding: 20px;
+}
+
+section .content h5 {
+  background: #e06547;
+  color: #fff;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-radius: 0 18px 18px 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+section .content h5 img {
+  width: 30px;
+  margin-right: 10px;
+}
+
+section .content h1 {
+  margin-top: 20px;
+  font-size: 50px;
+  line-height: 60px;
+  font-weight: 900;
+  color: var(--title-color);
+  transition: opacity 0.5s ease;
+}
+
+section .content p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--title-color);
+  max-width: 300px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+section .content .img-slider {
+  margin-top: 30px;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  background: var(--img-slider-color);
+  padding: 10px;
+}
+
+section .content .img-slider::-webkit-scrollbar {
+  display: none;
+}
+
+section .content .img-slider img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 0.3s linear;
+}
+
+section .content .img-slider img.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+section .image-box {
+  width: 52%;
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+}
+
+section .image-box .images {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+section .image-box .images img {
+  height: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+section .image-box .images img.active {
+  opacity: 1;
+  display: block;
+  width: 550px;
+  height: 550px;
+}
+
+.Main-Chart,
+.Main-Chart-1 {
+  width: 100%;
+  min-height: 400px;
+  padding: 20px 5% 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Main-Chart {
+  background: var(--main-chart-color);
+}
+
+.Main-Chart-1 {
+  background: #efc8a8;
+}
+
+.Main-Chart img,
+.Main-Chart-1 img {
+  max-width: 42%;
+  height: auto;
+  object-fit: cover;
+}
+
+.Main-Chart .content,
+.Main-Chart-1 .content-1 {
+  width: 45%;
+  padding: 15px;
+  text-align: justify;
+}
+
+.Main-Chart .content h1,
+.Main-Chart-1 .content-1 h1 {
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 60px;
+  color: var(--main-chart-h1-color);
+}
+
+.Main-Chart .content p,
+.Main-Chart-1 .content-1 p {
+  font-size: 15px;
+  color: rgba(18, 6, 6, 0.6);
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.Main-Chart .content button,
+.Main-Chart-1 .content-1 button {
+  background: #1e1b1b;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgb(101, 124, 67);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.Main-Chart .content button::before,
+.Main-Chart-1 .content-1 button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgb(188, 220, 90), rgb(60, 210, 193));
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.Main-Chart .content button:hover::before,
+.Main-Chart-1 .content-1 button:hover::before {
+  transform: translateX(100%);
+}
+
+.Main-Chart .content button:hover,
+.Main-Chart-1 .content-1 button:hover {
+  color: #5b3838;
+}
+
+.men-2 {
+  background: rgb(219, 219, 238);
+}
+
+.women-2 {
+  background: var(--fourth-color);
+}
+
+footer {
+  width: 100%;
+  background: #fcfaf7;
+  padding: 20px 0;
+}
+
+footer nav {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer nav ul li {
+  margin: 2px 10px;
+}
+
+footer nav ul li a {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s linear;
+}
+
+footer nav ul li h6 {
+  background-color: rgb(222, 80, 80);
+  padding: 8px;
+  color: #fffcfc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer nav ul li h6:hover {
+  transform: scale(1.03);
+  transition: 3s all;
+  background: linear-gradient(45deg, rgb(219, 116, 190), rgb(118, 118, 213));
+}
+
+footer nav ul li a:hover {
+  color: #b0abab;
+}
+
+footer hr {
+  width: 90%;
+  margin: 10px auto;
+}
+
+footer .cont {
+  width: 90%;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+footer .cont a {
+  margin: 0 10px;
+}
+
+footer .cont img {
+  width: 25px;
+}
+
+footer .cont .youtube img {
+  width: 56px;
+}
+
+footer .last-line {
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .last-line .pra {
+  font-size: 14px;
+  color: #5a5858;
+}
+
+footer .last-line .pra a {
+  color: #00a950;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+footer .last-line .last-img {
+  width: 100px;
+}
+
+#preloader {
+  background: #000000 url(images/loader.gif) no-repeat center center;
+  background-size: 15%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 9999999;
+}
+
+:root {
+  --primary-color: #fffefd;
+  --secondary-color: #000;
+  --third-color: #0080006e;
+  --fourth-color: #efb6b3a3;
+  --fiter: invert(1px);
+  --box-shadow-color: 1px 1px 2px 0.6px rgb(137, 130, 130);
+  --title-color: #000;
+  --img-slider-color: rgba(237, 227, 227, 0.215);
+  --main-chart-color: #e6dfd9;
+  --main-chart-h1-color: #000;
+}
+
+.dark-theme {
+  --primary-color: #893737f4;
+  --secondary-color: #fffcfc;
+  --third-color: #c9d7608b;
+  --fourth-color: #8cadbef1;
+  --fiter: invert();
+  --box-shadow-color: -1px -1px 2px 0.6px rgb(213, 167, 167);
+  --title-color: #fff;
+  --img-slider-color: rgba(57, 52, 52, 0.277);
+  --main-chart-color: linear-gradient(45deg, pink, rgb(228, 40, 40));
+  --main-chart-h1-color: rgba(255, 254, 254, 0.969);
+}
+
+.nav-menu.active .menu-icon {
+  display: none;
+}
+
+.nav-menu.active .close-icon {
+  display: inline-block !important;
+}
